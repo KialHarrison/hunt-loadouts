@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% block content %}
+<h1>Guns</h1>
+<ul>
+	{% for guns in guns %}
+	<li>
+		<a href="{{ guns.get_absolute_url }}">{{ guns.name }}</a>
+	</li>
+	{% endfor %}
+</ul>
+{% endblock %}

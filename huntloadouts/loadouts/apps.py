@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class LoudoutsConfig(AppConfig):
+class LoadoutsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'loudouts'
+    name = 'loadouts'

@@ -42,5 +42,16 @@ class Gun(models.Model):
     light_melee_damage_type = models.CharField(max_length=8, choices=MELEE_DAMAGE_TYPES)
     heavy_melee_damage_type = models.CharField(max_length=8, choices=MELEE_DAMAGE_TYPES)
     
+    def __str__(self):
+        return self.name
+    
+class Loadout(models.Model):
+    name = models.CharField(max_length=30, unique=True)
+    weapon_one = models.ForeignKey(Gun, on_delete=models.CASCADE, related_name='loadout_weapon_one')
+    weapon_two = models.ForeignKey(Gun, on_delete=models.CASCADE, related_name='loadout_weapon_two')
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
 
     

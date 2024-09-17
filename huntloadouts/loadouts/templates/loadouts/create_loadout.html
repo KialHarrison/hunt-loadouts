@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block content %}
+<div class="w-full max-w-2xl mx-auto sm:px-6 lg:px-8">
+	<h1>Create Loadout</h1>
+	<form action="" method="post" class="">
+		{% csrf_token %} {{ form }}
+		<button type="submit" class="bg-blue-600">Create Loadout</button>
+	</form>
+</div>
+{% endblock %}
